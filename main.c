@@ -1,19 +1,20 @@
 #include <stdio.h>
 
 int main(void) {
-    int i;
-    int num;
-    int sum;
-    sum = 0;
+    int n1;
+    int n2;
+    char method;
+    printf("enter the calculation : ");
+    scanf("%i %c %i", &n1, &method, &n2);
 
-    printf("input a number : ");
-    scanf("%i", &num);
-
-    for (i=0; i<num; i++) {
-        sum = sum + i + 1;
-        }
- 
-    printf("The result is %i\n", sum);
+    if (method == '+')
+        printf("+=%i", n1+n2);
+    else if (method == '-')
+        printf("-=%i", n1-n2);
+    else if (method == '*')
+        printf("*=%i", n1*n2);
+    else if (method == '/')
+        printf("/=%i", n1/n2);
 
     return 0;
 }

@@ -1,20 +1,26 @@
 #include <stdio.h>
 
 int main(void) {
-    int n1;
-    int n2;
-    char method;
-    printf("enter the calculation : ");
-    scanf("%i %c %i", &n1, &method, &n2);
+    int answer = 59;
+    int input;
+    int trial = 0;
 
-    if (method == '+')
-        printf("+=%i", n1+n2);
-    else if (method == '-')
-        printf("-=%i", n1-n2);
-    else if (method == '*')
-        printf("*=%i", n1*n2);
-    else if (method == '/')
-        printf("/=%i", n1/n2);
+    do
+    {
+        /* code */
+        printf("Guess a number : ");
+        scanf("%i", &input);
 
+        if (answer < input)
+            printf("high!\n");
+        else if (answer > input)
+            printf("low!\n");
+
+        trial++;
+
+    } while (answer != input);
+    
+    printf("Congratulation! trials:%i", trial);
+    
     return 0;
 }

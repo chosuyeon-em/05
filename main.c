@@ -1,17 +1,19 @@
 #include <stdio.h>
 
 int main(void) {
-    int count = 0;
-    char c;
+    int i;
+    int num;
+    int sum;
+    sum = 0;
 
-    printf("input a string : ");
-    
-    while ((c = getchar()) != '\n') {
-        if (c >= '0' && c <= '9')
-            count++;
-    }
+    printf("input a number : ");
+    scanf("%i", &num);
 
-printf("the number of digit is %i", count);
+    for (i=0; i<num; i++) {
+        sum = sum + i + 1;
+        }
+ 
+    printf("The result is %i\n", sum);
 
     return 0;
 }

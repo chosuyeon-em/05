@@ -1,17 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int integer;
-    printf("Enter an integer : ");
-    scanf("%i", &integer);
+    int n;
+    printf("Enter the integer : ");
+    scanf("%i", &n);
 
-    if (integer != 0)
-        if (integer > 0)
-            printf("positive number.\n");
-        else
-        printf("negative number.\n");
+    if (n >= 0)
+        printf("absolute value is %d.\n", n);
     else
-        printf("zero.\n");
+        printf("absolute value is %d.\n", -n);
 
     return 0;
 }
